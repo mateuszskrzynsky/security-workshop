@@ -34,7 +34,9 @@ public class SecurityConfig {
                                 .requestMatchers("/hello/forUser/**").hasRole("USER")
                                 .requestMatchers("/hello/forAll").permitAll()
                                 .requestMatchers("/api/login").permitAll()
-                .requestMatchers("dummyV2/**").hasRole("ADMIN"))
+                .requestMatchers("dummyV2/**").hasRole("ADMIN")
+                                .requestMatchers("dummyV3/**").hasRole("ADMIN")
+                                .requestMatchers("dummyV3/**").hasRole("GUEST"))
                 .httpBasic(Customizer.withDefaults());
 
         return http.build();
