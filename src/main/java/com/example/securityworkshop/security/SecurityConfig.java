@@ -58,7 +58,7 @@ public class SecurityConfig {
                 .roles("USER")
                 .build();
         UserDetails user3=User.builder()
-                .username("Gość")
+                .username("Gosc")
                 .password(encoder().encode("pass"))
                 .roles("GUEST")
                 .build();
